@@ -4,10 +4,14 @@ import { updateWeather } from './weather.js';
 function initCharacterSearch() {
     // Cambiado 'charSearch' por 'userId' que es el ID que tienes en el HTML
     const input = document.getElementById('userId'); 
+    const btn = document.getElementById('btnCargar');
     if (input) {
         input.addEventListener('input', () => {
             searchCharacters(input.value);
         });
+        if (btn) {
+            btn.addEventListener('click', () => searchCharacters(input.value));
+        }
         // Carga inicial
         searchCharacters('');
     }

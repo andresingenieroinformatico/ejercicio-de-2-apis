@@ -18,7 +18,7 @@ function initCharacterSearch() {
     const btn = document.getElementById('btnCargar');
     
     if (input) {
-        const debouncedSearch = debounce(() => searchCharacters(input.value), 3000);
+        const debouncedSearch = debounce(() => searchCharacters(input.value), 300);
         
         input.addEventListener('input', debouncedSearch);
         

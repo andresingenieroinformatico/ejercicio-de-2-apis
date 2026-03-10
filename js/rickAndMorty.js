@@ -12,7 +12,7 @@ export async function searchCharacters(query) {
         grid.innerHTML = data.results
             .map(char => `
                 <div class="card-gradiente p-4 flex items-center gap-4 border border-slate-100 shadow-sm">
-                    <img src="${char.image}" class="w-16 h-16 rounded-2xl shadow-md border-2 border-white">
+                    <img src="${char.image}" alt="Imagen de ${char.name}" class="w-16 h-16 rounded-2xl shadow-md border-2 border-white">
                     <div>
                         <span class="text-[10px] font-bold text-emerald-500 uppercase tracking-tighter">${char.status}</span>
                         <h4 class="font-bold text-slate-800 leading-tight capitalize">${char.name}</h4>

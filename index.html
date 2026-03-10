@@ -39,9 +39,9 @@
         </h2>
         
         <div class="flex gap-2 mb-8 bg-white/50 backdrop-blur-sm p-2 rounded-2xl border border-slate-100 shadow-inner focus-within:ring-2 focus-within:ring-cyan-400/20 focus-within:border-cyan-300 transition-all duration-300">
-            <input type="text" id="inputCiudad" placeholder="Buscar ciudad..." class="w-full bg-transparent px-4 py-2 outline-none text-slate-700 font-medium placeholder:text-slate-400 placeholder:italic">
+            <input type="text" id="inputCiudad" aria-label="Buscar ciudad" placeholder="Buscar ciudad..." class="w-full bg-transparent px-4 py-2 outline-none text-slate-700 font-medium placeholder:text-slate-400 placeholder:italic">
             
-            <button id="btnBuscar" 
+            <button id="btnBuscar" aria-label="Buscar clima de ciudad" 
                     class="bg-cyan-500 hover:bg-cyan-600 text-white p-3 rounded-xl transition-all shadow-lg shadow-cyan-200 active:scale-95 flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -67,13 +67,13 @@
                     <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                         <div>
                             <h2 class="text-2xl font-bold text-slate-800">Explorador de Contenido</h2>
-                            <p class="text-slate-400 text-sm italic">Filtra por ID de usuario</p>
+                            <p class="text-slate-400 text-sm italic">Filtra por nombre de personaje</p>
                         </div>
                         
                         <div class="flex bg-slate-50 p-1.5 rounded-2xl border border-slate-200 min-w-[280px]">
-                            <input type="text" id="userId" placeholder="Buscar personajes..." 
+                            <input type="text" id="characterName" aria-label="Buscar personajes" placeholder="Buscar personajes..." 
                                 class="flex-1 bg-transparent px-4 outline-none text-slate-600">
-                            <button id="btnCargar" class="bg-slate-800 hover:bg-slate-900 text-white px-6 py-2 rounded-xl font-bold text-sm transition shadow-sm">
+                            <button id="btnCargar" aria-label="Cargar personajes" class="bg-slate-800 hover:bg-slate-900 text-white px-6 py-2 rounded-xl font-bold text-sm transition shadow-sm">
                                 Cargar
                             </button>
                         </div>

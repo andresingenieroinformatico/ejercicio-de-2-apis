@@ -29,7 +29,7 @@ export async function updateWeather(city) {
                         <p class="text-sm font-bold text-slate-700">${Math.round(d.main.feels_like)}°</p>
                     </div>
                 </div>
-                <img src="https://openweathermap.org/img/wn/${d.weather[0].icon}@2x.png" class="mx-auto w-16">
+                <img src="https://openweathermap.org/img/wn/${d.weather[0].icon}@2x.png" alt="Icono del clima actual: ${d.weather[0].description}" class="mx-auto w-16">
             </div>
         `;
     } catch (err) {

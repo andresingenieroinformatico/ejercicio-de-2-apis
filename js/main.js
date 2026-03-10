@@ -1,14 +1,27 @@
 import { searchCharacters } from './rickAndMorty.js';
 import { updateWeather } from './weather.js';
 
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 function initCharacterSearch() {
-    // Cambiado 'charSearch' por 'userId' que es el ID que tienes en el HTML
-    const input = document.getElementById('userId'); 
+    const input = document.getElementById('characterName'); 
     const btn = document.getElementById('btnCargar');
+    
     if (input) {
-        input.addEventListener('input', () => {
-            searchCharacters(input.value);
-        });
+        const debouncedSearch = debounce(() => searchCharacters(input.value), 300);
+        
+        input.addEventListener('input', debouncedSearch);
+        
         if (btn) {
             btn.addEventListener('click', () => searchCharacters(input.value));
         }
